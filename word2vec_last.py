@@ -28,7 +28,7 @@ def topics():
     documents = [w['topic'] for i, w in wb.iterrows()]
 
     binary = True
-    model_name = 'modelWithAllData.bin'
+    model_name = 'ksucca_full_cbow.bin'
     if binary:
         w2v_model = KeyedVectors.load_word2vec_format(model_name, binary=True)
     else:
