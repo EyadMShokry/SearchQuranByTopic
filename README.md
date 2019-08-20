@@ -7,7 +7,7 @@ Quran using Keyword, Verse or Topic with accuracy about 70%.
 [The second part](https://github.com/EyadMShokry/QuranSearchAndMemorization) is an iOS Application, which used to introduce the first part, which we mentioned and, also, to help users memorize and recite the Quran using Voice and help them know their mistakes. This system has high accuracy in Evaluating users' sayings in comparison of other applications.
 
 It is a Search Engine for Quran written in Python that allows you to search by Topic or Concept like صلة الرحم, الميراث.
-our Search Engine is not only matching the words, but it uses a Deep Learning Model called word2vec, or Word-To-Vector to take into consideration the meaning/semantic of the words. Download it [from here](https://drive.google.com/openid=1xGfrpibTLlqMdmil9hCW2__QDkv9M7nQ)
+our Search Engine is not only matching the words, but it uses a Deep Learning Model called word2vec, or Word-To-Vector to take into consideration the meaning/semantic of the words. Download it [from here](https://drive.google.com/open?id=1rZiOKy71Z_WycxnOG9bwrNoAc4ziGo_n)
 
 ## Dataset Preparation
 we needed to get a documented and trusted representation of verses of the whole Quran and their according topics, Because this is something religious which we cannot make it ourselves to be trusted for the users of the application.
@@ -22,13 +22,13 @@ We used this book to annotate each verse with it's related topic. So we could ma
 ## Word2Vec Model
 ### Arabic Islamic Corpus for training the Model
 We collected our Corpus which we used to train the word2vec model from many resources:
+- [King Saud University Corpus of Classical Arabic (KSUCCA)](https://mahaalrabiah.wordpress.com/2012/07/20/king-saud-university-corpus-of-classical-arabic-ksucca/)
 - [Quran Text](http://tanzil.net) with total number 751,291 words
 - [Watan-2004](https://sites.google.com/site/mouradabbas9/corpora) Abbas et al., 2011 with total number of 106,289,288 words
 - CNN-arabic, (Saad and Ashour, 2010) OSAC: Open Source Arabic Corpus with total number of 23,984,550 words
 - BBC-arabic, (Saad and Ashour, 2010) OSAC: Open Source Arabic Corpus with total number of 19,833,141 words
 - [Arabic Book Reviews](http://www.mohamedaly.info/datasets/labr) Aly and  Atiya, 2013 LABR: Large Scale Arabic Book Reviews with total number of 38,065,922 words
 - [Hadith dataset](https://www.kaggle.com/fahd09/hadith-dataset/version/1) with 2,410,569 words and 34,409 unique words
-- The Islamic folder of [KSUCCA Dataset](https://mahaalrabiah.wordpress.com/2012/07/20/king-saud-university-corpus-of-classical-arabic-ksucca/) with total number 23,645,087 words
 
 ### Training the Model
 We collected all of this corpora in only one txt file and after processing it we used it to train our word2vec model using this command:
