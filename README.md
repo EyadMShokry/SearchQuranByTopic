@@ -31,7 +31,7 @@ We collected our Corpus which we used to train the word2vec model from many reso
 - [Hadith dataset](https://www.kaggle.com/fahd09/hadith-dataset/version/1) with 2,410,569 words and 34,409 unique words
 
 ### Training the Model
-We collected all of this corpora in only one txt file and after processing it we used it to train our word2vec model using this command:
+We collected all of this corpora in only one txt file, access it [from here](https://drive.google.com/open?id=1THWusJjv3wkvXgfUcAPmq4xPUUPQkGxA) and after processing it we used it to train our word2vec model using this command:
 `$ ./word2vec -train corpus.txt -output model.bin -cbow 1 -size 300 -window 10 -threads 8 -binary 1 -iter 15`
 
 **Note**: This is not the final version of the Project. It's still under Development.
