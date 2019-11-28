@@ -15,6 +15,10 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 app.config["JSON_AS_ASCII"] = False
 
+# TODO add Security mechanism
+# TODO configure https
+# TODO Optimize code
+
 
 @app.route('/api/v1/resources/topics', methods=['GET'])
 def topics():
@@ -59,6 +63,7 @@ def topics():
 
         feature_vec = np.zeros((dimension,), dtype="float32")
         retrieved_words = 0
+        # TODO Check second loop, bug is possible
         for token in example:
             try:
                 feature_vec = np.add(feature_vec, embeddings[token])
@@ -74,6 +79,9 @@ def topics():
 
     '''data vectors'''
     data_vecrors = []
+    # TODO Optimize TreeCode.xlsx read
+    # TODO delete this idea, we won't save topics' vectors in the excel file
+    # TODO save vector representation for topics in a file and read it for performance
     data = pd.read_excel("TreeCode.xlsx")
     for index, row in data.iterrows():
         data_vecrors.append([float(w) for w in row["vector"].split(" ") if w != ""])
@@ -90,6 +98,7 @@ def topics():
                                                                                                                 300))[
             0]]
     try:
+        # TODO put constants in environment file
         topicsNumber = 3
         result_ = [i for i in to_sort_result.nlargest(topicsNumber, "prob").iloc[:]['topic']]
         c = 1
