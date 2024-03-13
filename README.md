@@ -1,4 +1,7 @@
 # QuranSearchByTopic
+[Research Paper](https://www.sciencedirect.com/science/article/pii/S1319157819311012)
+
+
 This Project is developed to help all Muslims to deal with the Holy Quran easier and faster. as this Project allow them to search the
 Quran for specific Keyword or Verse, and also for a Concrete Topic or Conceptual Topic and to help them in it's Memorization and Recitation also [See Recitation Part](https://github.com/EyadMShokry/QuranSearchAndMemorization).
 
